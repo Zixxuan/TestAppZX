@@ -8,8 +8,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.EditText;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView totalTextView;
+    EditText percentageText;
+    EditText numText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +34,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+        totalTextView = (TextView) findViewById(R.id.TotalTextView);
+        percentageText = (EditText) findViewById(R.id.percentageText);
+        numText = (EditText) findViewById(R.id.numText);
+
+        Button calcButton = (Button)findViewById(R.id.calcBut);
+        calcButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                float pct = Float.parseFloat(percentageText.getText().toString());
+                float dec = pct / 100;
+                float total = dec * Float.parseFloat(numText.getText().toString());
+                totalTextView.setText(Float.toString(total));
             }
         });
     }
