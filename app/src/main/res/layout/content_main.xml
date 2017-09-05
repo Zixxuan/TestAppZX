@@ -78,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Enter Number"
+        android:hint="Enter Number Leh"
         android:inputType="numberDecimal"
         android:textAlignment="center"
         tools:layout_constraintBottom_creator="1"
