@@ -30,7 +30,7 @@
         android:id="@+id/textView"
         android:layout_width="84dp"
         android:layout_height="22dp"
-        android:text="!^"
+        android:text="!!"
         android:textAlignment="center"
         android:textSize="18sp"
         tools:layout_constraintTop_creator="1"
